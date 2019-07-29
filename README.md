@@ -3,6 +3,9 @@ Username: pizzaguy22
 
 Password: 4523039
 
+Clone from github or try this APK
+
+https://www.dropbox.com/s/h2f40eylq3w6ce9/app-debug.apk?dl=0
 ## Known issues
 API calls to hoteloffers gives a network exception error on devices with API 19 and lower.
 
