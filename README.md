@@ -20,6 +20,8 @@ Also tested using coordinates from google instead, still gives error.
 
 Typing a nonsupported 3 letter citycode into HotelOffers causes an immediate crash due to another network exception Error
 
+Tested on devices: api 19, 27, 28
+
 ## Built With
 amazon-web-services,
 node.js,
