@@ -1,9 +1,11 @@
 ## Test out the app with login:
 Username: pizzaguy22
+
 Password: 4523039
 
 
-Photos of travelor.io:
+Photos:
+
 https://imgur.com/a/1NCgDfK
 
 Clone from github or try this APK
