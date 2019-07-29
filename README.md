@@ -12,6 +12,21 @@ Also tested using coordinates from google instead, still gives error.
 
 Typing a nonsupported 3 letter citycode into HotelOffers causes an immediate crash due to another network exception Error
 
+## Built With
+amazon-web-services,
+node.js,
+postgresql,
+java,
+agora,
+android-studio,
+lambda,
+rds,
+apigateway,
+s3,
+rekognition,
+cognito,
+sns
+
 ## What it does
 Travelor.io has many functions. The unique ones include helping find/book hotels. Provides optional live stream of the rooms available for those that are unsure which room they would like. Also provides live streams of places,  you would want to visit / or already plan on visiting, but at a later date so you have a feel of what it's going to be like. All you have to do is make a request to someone in that area you plan on visiting and they stream from their phone directly to yours. (This will provide an incentive if you have to pay the streamer, somewhat of an ecommerce model)
 
