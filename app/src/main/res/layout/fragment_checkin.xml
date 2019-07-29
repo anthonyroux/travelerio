@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/navigationDrawerColor"
+        android:id="@+id/fragment_checkin_toolbar"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/fragment_checkin_backarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/icon_back_white_arrow"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="travelor.io ML Check in"
+                android:textStyle="bold"
+                android:textColor="@color/standardBlue"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/fragment_checkin_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/backgroundColor"
+        android:layout_below="@+id/fragment_checkin_toolbar"/>
+
+    <TextView
+        android:id="@+id/fragment_checkin_upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Image"
+        android:layout_below="@+id/fragment_checkin_image"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="14dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="12sp"
+        android:textStyle="bold"
+        android:background="@drawable/edit_profile_button"
+
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/fragment_checkin_checkin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check In"
+        android:layout_below="@+id/fragment_checkin_upload_button"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="14dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:textStyle="bold"
+        android:background="@drawable/edit_profile_button"
+
+        android:textColor="@color/colorWhite"/>
+
+
+
+
+
+</RelativeLayout>

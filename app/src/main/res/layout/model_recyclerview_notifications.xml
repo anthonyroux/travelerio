@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/modelrecycler_notifications_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="London (LON) - Honolulu (HNL)"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:id="@+id/modelrecycler_notifications_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Honolulu is $539 RT on American Airlines. Book now. Sun, Jul 28 - Sun, Jul 28"
+        android:layout_below="@+id/modelrecycler_notifications_more"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        />
+
+    <TextView
+        android:id="@+id/modelrecycler_notifications_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 hours ago"
+        android:textSize="12sp"
+        android:layout_below="@+id/modelrecycler_notifications_description"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"/>
+
+    <ImageButton
+        android:id="@+id/modelrecycler_notifications_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_notifications_more"
+        android:layout_alignParentRight="true"
+        android:padding="15dp"
+
+        android:background="@color/colorWhite"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dividerColor"
+        android:layout_below="@+id/modelrecycler_notifications_date"/>
+
+
+</RelativeLayout>

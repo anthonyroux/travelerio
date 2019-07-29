@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/hashTagBlue">
+
+    <TextView
+        android:id="@+id/fragment_add_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="travelor.io"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:baselineAligned="false"
+        android:layout_below="@+id/fragment_add_app_name">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_scan_ticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_weight=".25">
+
+        <ImageView
+            android:id="@+id/image_scan_ticket"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/profile_picture_image_border"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/icon_scan"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan Ticket"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/image_scan_ticket"
+            android:textColor="@color/whiteText"
+            android:textStyle="bold"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_check_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_weight=".25">
+
+        <ImageView
+            android:id="@+id/check_in"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/profile_picture_image_border"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/icon_check_in"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check In"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/check_in"
+            android:textColor="@color/whiteText"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_add_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_weight=".25">
+
+        <ImageView
+            android:id="@+id/add_review"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/profile_picture_image_border"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/icon_add_review"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Review"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/add_review"
+            android:textColor="@color/whiteText"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_reservations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_weight=".25"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:id="@+id/add_booking"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/profile_picture_image_border"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/icon_add_booking"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reservations"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/add_booking"
+            android:textColor="@color/whiteText"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

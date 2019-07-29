@@ -1,0 +1,32 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/modelrecycler_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Starbucks"
+        android:textColor="@color/colorBlackFont"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_margin="15dp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/modelrecycler_tags"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:text="Restaurant, Tourist Trap, Cool place, etcaaaaaaaaaaaaaaaaaaaaaaaaa"
+        android:layout_toRightOf="@+id/modelrecycler_city_name"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/modelrecycler_tags"
+        android:background="@color/dividerColor"/>
+
+
+</RelativeLayout>

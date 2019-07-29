@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dividerColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/modelclub_comments_layout"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+    <RatingBar
+        android:id="@+id/reviews_rating1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:rating="4"
+        android:layout_marginTop="12dp"
+        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+        android:layout_below="@+id/modelhotel_hotel_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:id="@+id/modelclub_comments_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ritz Carlton Hotel"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/reviews_rating1"
+        android:textColor="@color/colorBlackFont"/>
+
+    <TextView
+        android:id="@+id/modelclub_comments_subreddit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/modelclub_comments_title"
+        android:layout_marginLeft="15dp"
+        android:text="Half Moonbay, CA"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/modelclub_comments_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/modelclub_comments_subreddit"
+        android:textSize="12sp"
+        android:layout_below="@+id/modelclub_comments_title"
+        android:text=" • 3d"/>
+
+    <TextView
+        android:id="@+id/modelclub_comments_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/modelclub_comments_time"
+        android:textSize="12sp"
+        android:text=" • 16"
+        android:layout_below="@+id/modelclub_comments_title"/>
+
+    <ImageView
+        android:id="@+id/modelclub_comments_upvote"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:srcCompat="@drawable/icon_single_comment_upvote"
+        android:layout_below="@+id/modelclub_comments_title"
+        android:layout_toRightOf="@+id/modelclub_comments_points"/>
+
+    <TextView
+        android:id="@+id/modelclub_comments_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_below="@+id/modelclub_comments_upvote"
+        android:layout_marginLeft="15dp"
+        android:text="@string/review_example1"
+        android:paddingBottom="15dp"
+        android:layout_marginRight="15dp"
+        />
+
+    <View
+        android:id="@+id/modelclub_comments_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/dividerVertical"
+        android:layout_alignBottom="@+id/modelclub_comments_description" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <RatingBar
+            android:id="@+id/reviews_rating2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:rating="5"
+            android:layout_marginTop="12dp"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:layout_below="@+id/modelhotel_hotel_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:id="@+id/modelclub_comments_title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marriott Marquis"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/reviews_rating2"
+            android:textColor="@color/colorBlackFont"/>
+
+        <TextView
+            android:id="@+id/modelclub_comments_subreddit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/modelclub_comments_title2"
+            android:layout_marginLeft="15dp"
+            android:text="San Francisco, CA"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/modelclub_comments_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/modelclub_comments_subreddit2"
+            android:textSize="12sp"
+            android:layout_below="@+id/modelclub_comments_title2"
+            android:text=" • 1mo"/>
+
+        <TextView
+            android:id="@+id/modelclub_comments_points2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/modelclub_comments_time2"
+            android:textSize="12sp"
+            android:text=" • 8"
+            android:layout_below="@+id/modelclub_comments_title2"/>
+
+        <ImageView
+            android:id="@+id/modelclub_comments_upvote2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/icon_single_comment_upvote"
+            android:layout_below="@+id/modelclub_comments_title2"
+            android:layout_toRightOf="@+id/modelclub_comments_points2"/>
+
+        <TextView
+            android:id="@+id/modelclub_comments_description2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_below="@+id/modelclub_comments_upvote2"
+            android:layout_marginLeft="15dp"
+            android:text="@string/review_example2"
+            android:paddingBottom="15dp"
+            android:layout_marginRight="15dp"
+            />
+
+        <View
+            android:id="@+id/modelclub_comments_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/dividerVertical"
+            android:layout_alignBottom="@+id/modelclub_comments_description2"
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/popup_menu_stop_watching"
+        android:title="Stop watching"
+        android:icon="@drawable/icon_stop_watching"
+        />
+
+    <item
+        android:id="@+id/popup_menu_remove"
+        android:title="Remove"
+        android:icon="@drawable/icon_remove"/>
+
+</menu>

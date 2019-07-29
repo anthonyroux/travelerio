@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/alertdialog_textview_amenities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amenities:"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:layout_margin="12dp"/>
+
+    <TextView
+        android:id="@+id/alertdialog_amenities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alertdialog_textview_amenities"
+        android:text="--"
+        android:layout_marginLeft="12dp"/>
+
+    <TextView
+        android:id="@+id/alertdialog_textview_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:layout_margin="12dp"
+        android:layout_below="@+id/alertdialog_amenities"/>
+
+    <TextView
+        android:id="@+id/alertdialog_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alertdialog_textview_description"
+        android:text="@string/hotel_description"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="12dp"
+        android:maxLines="5"
+        android:ellipsize="end"/>
+
+
+
+
+
+
+
+</RelativeLayout>

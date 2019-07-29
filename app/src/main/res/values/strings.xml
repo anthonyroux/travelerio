@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">travelerio</string>
+    <string name="amadeus_api_key">uxUtcGBwDr4ekVGAdDQQEODMUdq6AAZs</string>
+    <string name="amadeus_client_secret">nde7h5R4ZNLfPOzJ</string>
+    <string name="hotel_description">Choose the Crowne Plaza London the City hotel for successful
+        business and gourmet dining in Londons famous Square Mile. Step into the stylish lobby of
+        Crowne Plaza London the City where our dedicated team can help throughout your stay.</string>
+
+    <string name="review_example1">Very nice property! Stayed three nights last week and enjoyed the cool temps along with the crashing Surf.
+        Staff was friendly and was there for anything I needed during my stay.
+        Highly recommend this place if you like the oceanic environment with a touch of class.</string>
+
+    <string name="review_example2">Beautiful gorgeous hotel, great staff and absolutely great rates in town!
+        I highly recommend everyone to come and stay here. The new rooms are beautiful, spacious and super clean!
+        Best part, theres so much todo in a walking distance. Thank you Ash for all of your help! Awesome dude. </string>
+
+    <string name="agora_app_id">b356a2da2ec74bed87bf9cdbb584b26b</string>
+
+
+
+</resources>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/modelhotel_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:id="@+id/modelhotel_hotel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotel California"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_below="@+id/modelhotel_image"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/colorBlackFont"/>
+
+        <RatingBar
+            android:id="@+id/modelhotel_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:layout_marginTop="2dp"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:layout_below="@+id/modelhotel_hotel_name"
+            android:layout_marginLeft="12dp" />
+
+        <TextView
+            android:id="@+id/modelhotel_visit_website"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Visit hotel website"
+            android:layout_below="@+id/modelhotel_rating"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/modelhotel_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9 Reviews"
+            android:layout_below="@+id/modelhotel_hotel_name"
+            android:layout_toRightOf="@+id/modelhotel_rating"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/modelhotel_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="1.6 mi"
+            android:layout_below="@+id/modelhotel_image"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:id="@+id/modelhotel_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$360"
+            android:textSize="16dp"
+            android:textColor="@color/colorBlackFont"
+            android:textStyle="bold"
+            android:layout_below="@+id/modelhotel_visit_website"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/modelhotel_currency_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textColor="@color/colorBlackFont"
+            android:textStyle="bold"
+            android:layout_below="@+id/modelhotel_visit_website"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/modelhotel_price"
+            android:textSize="16sp"
+            android:layout_marginLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/modelhotel_more_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/modelhotel_price"
+            android:paddingTop="5dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text="More Info"/>
+
+
+        <TextView
+            android:id="@+id/modelhotel_amenities_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amenities"
+            android:layout_below="@id/modelhotel_visit_website"
+            android:layout_alignParentRight="true"
+            android:paddingRight="14dp"
+            android:paddingLeft="14dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_margin="8dp"
+            android:textStyle="bold"
+            android:background="@drawable/edit_profile_button"
+            android:textSize="11sp"
+            android:textColor="@color/colorWhite"/>
+
+        <ImageView
+            android:id="@+id/modelhotel_stream_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_hotel_stream"
+            android:layout_above="@+id/modelhotel_amenities_button"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"/>
+
+        <ImageView
+            android:id="@+id/modelhotel_bookmark_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_hotel_bookmark"
+            android:layout_alignParentRight="true"
+            android:padding="12dp"/>
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

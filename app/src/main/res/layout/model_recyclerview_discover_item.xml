@@ -1,0 +1,22 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/discover_item_rel_layout">
+    <ImageView
+        android:id="@+id/modelrecycler_image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        android:id="@+id/modelrecycler_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bangalore"
+        android:textColor="@color/colorBlackFont"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/modelrecycler_image"
+        android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>

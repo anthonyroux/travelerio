@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/cityspots_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:id="@+id/cityspots_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotel California"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_below="@+id/cityspots_image"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/colorBlackFont"/>
+
+        <RatingBar
+            android:id="@+id/cityspots_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:layout_marginTop="2dp"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:layout_below="@+id/cityspots_name"
+            android:layout_marginLeft="12dp" />
+
+
+        <TextView
+            android:id="@+id/cityspots_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9 Reviews"
+            android:layout_below="@+id/cityspots_name"
+            android:layout_toRightOf="@+id/cityspots_rating"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/cityspots_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="1.6 mi"
+            android:layout_below="@+id/cityspots_image"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="8dp"/>
+
+
+        <TextView
+            android:id="@+id/cityspots_more_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cityspots_rating"
+            android:paddingTop="5dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text="More Info"/>
+
+
+        <ImageView
+            android:id="@+id/cityspots_stream_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_hotel_stream"
+            android:layout_below="@+id/cityspots_distance"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"/>
+
+        <ImageView
+            android:id="@+id/cityspots_bookmark_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_hotel_bookmark"
+            android:layout_alignParentRight="true"
+            android:padding="12dp"/>
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
