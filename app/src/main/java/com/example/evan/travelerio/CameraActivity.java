@@ -39,9 +39,11 @@ public class CameraActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
-        mChannelName = getIntent().getExtras().getString("channel_name");
-        mToken = getIntent().getExtras().getString("temp_token");
+        //mChannelName = getIntent().getExtras().getString("channel_name");
+        //mToken = getIntent().getExtras().getString("temp_token");
         mCameraName = getIntent().getExtras().getString("spot_name");
+        mChannelName = "myChannel1";
+        mToken=getString(R.string.temp_token);
 
         Log.d(TAG, "onCreate: Channel Name: " + mChannelName);
         Log.d(TAG, "onCreate: Temp Token: " + mToken);
@@ -84,7 +86,7 @@ public class CameraActivity extends AppCompatActivity  {
     private void initAgoraEngineAndJoinChannel(){
         initializeAgoraEngine();
         setupVideoProfile();
-        setupLocalVideo();
+        //setupLocalVideo();
         joinChannel();
 
     }

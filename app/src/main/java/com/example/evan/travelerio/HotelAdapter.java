@@ -64,9 +64,10 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int position) {
 
-        if(mHotelImage.get(position) != null){
-            Glide.with(mContext).load(mHotelImage.get(position)).apply(RequestOptions.centerCropTransform()).into(viewHolder.viewHolderImage);
-        }
+        //if you don't want fake images remove this line below:
+
+        //Glide.with(mContext).load(mHotelImage.get(position)).apply(RequestOptions.centerCropTransform()).into(viewHolder.viewHolderImage);
+
 
         viewHolder.viewHolderHotelName.setText(mHotelName.get(position));
         viewHolder.viewHolderDistance.setText(mDistance.get(position));

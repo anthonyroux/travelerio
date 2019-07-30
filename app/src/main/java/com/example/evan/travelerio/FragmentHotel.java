@@ -33,6 +33,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -83,6 +84,9 @@ public class FragmentHotel extends Fragment {
         if(getArguments() != null) {
             mCityCode = getArguments().getString("city_code");
             Log.d(TAG, "onCreate: mCityId: " + mCityCode);
+        }else{
+            Toast.makeText(mContext, "This page is the default search for San Francisco Hotels", Toast.LENGTH_LONG).show();
+            mCityCode = "SFO";
         }
 
 
@@ -125,109 +129,115 @@ public class FragmentHotel extends Fragment {
                             HotelOffer[] offers = mAmadeus.shopping.hotelOffers.get(Params
                                     .with("cityCode", mCityCode));
 
+                            Log.d(TAG, "run: GG: " + Arrays.toString(offers));
 
-                            JSONObject jsonObject = new JSONObject(offers[0].getResponse().getBody());
-
-
-
-                            JSONArray jsonArrayData = jsonObject.getJSONArray("data");
-                            for(int i = 0; i < jsonArrayData.length(); i++){
-                                JSONObject dataObject = jsonArrayData.getJSONObject(i);
-                                JSONObject hotelObject = dataObject.getJSONObject("hotel");
-                                JSONObject distanceObject = hotelObject.getJSONObject("hotelDistance");
-
-                                //Log.d(TAG, "run: DATAOBJECT: " + dataObject.toString(4));
-
-
-                                if(!hotelObject.has("name")){
-                                    mHotelName.add("No Rating");
-                                }else{
-                                    String hotel_name = hotelObject.getString("name");
-                                    mHotelName.add(hotel_name);
-                                }
-
-                                if(!distanceObject.has("distance")){
-                                    mHotelName.add("null");
-                                }else{
-                                    String hotel_distance = distanceObject.getString("distance");
-                                    String hotel_km = hotel_distance + " km";
-                                    mHotelDistance.add(hotel_km);
-                                }
-
-                                if(!hotelObject.has("rating")){
-                                    mHotelRating.add("No Rating");
-                                }else{
-                                    String hotel_rating = hotelObject.getString("rating");
-                                    mHotelRating.add(hotel_rating);
-                                }
+                            if(!Arrays.toString(offers).equals("[]")){
+                                JSONObject jsonObject = new JSONObject(offers[0].getResponse().getBody());
 
 
 
-                                if(!hotelObject.has("description")){
-                                    mHotelDescription.add("No Description");
-                                }else{
-                                    JSONObject hotel_description = hotelObject.getJSONObject("description");
-                                    String text = hotel_description.getString("text");
-                                    mHotelDescription.add(text);
-                                }
+                                JSONArray jsonArrayData = jsonObject.getJSONArray("data");
+                                for(int i = 0; i < jsonArrayData.length(); i++){
+                                    JSONObject dataObject = jsonArrayData.getJSONObject(i);
+                                    JSONObject hotelObject = dataObject.getJSONObject("hotel");
+                                    JSONObject distanceObject = hotelObject.getJSONObject("hotelDistance");
 
-                                if(!hotelObject.has("amenities")){
-                                    mHotelAttributes.add("Amenities N/A");
-                                }else{
-                                    JSONArray hotel_attributes = hotelObject.getJSONArray("amenities");
-                                    String amenitiesString = "";
-                                    for(int a = 0; a < 8; a++){
-                                        Log.d(TAG, "run: GG: " + hotel_attributes.get(a));
-                                        if(a != 7){
-                                            amenitiesString += hotel_attributes.getString(a) + ", ";
-                                        }else{
-                                            amenitiesString += hotel_attributes.getString(a) + " . . .";
+                                    //Log.d(TAG, "run: DATAOBJECT: " + dataObject.toString(4));
+
+
+                                    if(!hotelObject.has("name")){
+                                        mHotelName.add("No Rating");
+                                    }else{
+                                        String hotel_name = hotelObject.getString("name");
+                                        mHotelName.add(hotel_name);
+                                    }
+
+                                    if(!distanceObject.has("distance")){
+                                        mHotelName.add("null");
+                                    }else{
+                                        String hotel_distance = distanceObject.getString("distance");
+                                        String hotel_km = hotel_distance + " km";
+                                        mHotelDistance.add(hotel_km);
+                                    }
+
+                                    if(!hotelObject.has("rating")){
+                                        mHotelRating.add("No Rating");
+                                    }else{
+                                        String hotel_rating = hotelObject.getString("rating");
+                                        mHotelRating.add(hotel_rating);
+                                    }
+
+
+
+                                    if(!hotelObject.has("description")){
+                                        mHotelDescription.add("No Description");
+                                    }else{
+                                        JSONObject hotel_description = hotelObject.getJSONObject("description");
+                                        String text = hotel_description.getString("text");
+                                        mHotelDescription.add(text);
+                                    }
+
+                                    if(!hotelObject.has("amenities")){
+                                        mHotelAttributes.add("Amenities N/A");
+                                    }else{
+                                        JSONArray hotel_attributes = hotelObject.getJSONArray("amenities");
+                                        String amenitiesString = "";
+                                        for(int a = 0; a < 8; a++){
+                                            Log.d(TAG, "run: GG: " + hotel_attributes.get(a));
+                                            if(a != 7){
+                                                amenitiesString += hotel_attributes.getString(a) + ", ";
+                                            }else{
+                                                amenitiesString += hotel_attributes.getString(a) + " . . .";
+                                            }
+
                                         }
+                                        mHotelAttributes.add(amenitiesString);
 
                                     }
-                                    mHotelAttributes.add(amenitiesString);
 
                                 }
 
+                                for (int i = 0; i < jsonArrayData.length(); i++){
+                                    JSONObject dataObject = jsonArrayData.getJSONObject(i);
+                                    JSONArray offersArray= dataObject.getJSONArray("offers");
+
+                                    JSONObject price = offersArray.getJSONObject(0);
+                                    JSONObject total = price.getJSONObject("price");
+
+
+                                    if(!total.has("total")){
+                                        mHotelPrice.add("N/A");
+                                    }else{
+                                        mHotelPrice.add(total.getString("total"));
+                                    }
+
+                                    if(!total.has("currency")){
+                                        mCurrencyType.add("N/A");
+                                    }else{
+                                        mCurrencyType.add(total.getString("currency"));
+                                    }
+
+
+
+                                }
+
+
+
+                                jsonParse();
+
+
+
+                                Log.d(TAG, "run: HotelName: " + mHotelName);
+                                Log.d(TAG, "run: HotelRating: " + mHotelRating);
+                                Log.d(TAG, "run: HotelDistance: " + mHotelDistance);
+                                Log.d(TAG, "run: HotelDescription: " + mHotelDescription);
+                                Log.d(TAG, "run: HotelPrice: " + mHotelPrice);
+                                Log.d(TAG, "run: CurrencyType: " + mCurrencyType);
+                                Log.d(TAG, "run: HotelAttributes: " + mHotelAttributes);
+                            }else{
+                                Toast.makeText(mContext, "No Hotel information available for this city!", Toast.LENGTH_LONG).show();
                             }
 
-                            for (int i = 0; i < jsonArrayData.length(); i++){
-                                JSONObject dataObject = jsonArrayData.getJSONObject(i);
-                                JSONArray offersArray= dataObject.getJSONArray("offers");
-
-                                JSONObject price = offersArray.getJSONObject(0);
-                                JSONObject total = price.getJSONObject("price");
-
-
-                                if(!total.has("total")){
-                                    mHotelPrice.add("N/A");
-                                }else{
-                                    mHotelPrice.add(total.getString("total"));
-                                }
-
-                                if(!total.has("currency")){
-                                    mCurrencyType.add("N/A");
-                                }else{
-                                    mCurrencyType.add(total.getString("currency"));
-                                }
-
-
-
-                            }
-
-
-
-                            jsonParse();
-
-
-
-                            Log.d(TAG, "run: HotelName: " + mHotelName);
-                            Log.d(TAG, "run: HotelRating: " + mHotelRating);
-                            Log.d(TAG, "run: HotelDistance: " + mHotelDistance);
-                            Log.d(TAG, "run: HotelDescription: " + mHotelDescription);
-                            Log.d(TAG, "run: HotelPrice: " + mHotelPrice);
-                            Log.d(TAG, "run: CurrencyType: " + mCurrencyType);
-                            Log.d(TAG, "run: HotelAttributes: " + mHotelAttributes);
 
 
 
