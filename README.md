@@ -5,11 +5,6 @@ Password: 4523039
 
 https://vimeo.com/350896141
 
-
-Photos:
-
-https://imgur.com/a/1NCgDfK
-
 Clone from github or try this APK
 
 https://www.dropbox.com/s/67du1ynjruqde3i/travelorio.apk?dl=0
